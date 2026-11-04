@@ -1,0 +1,43 @@
+# --- Entornos virtuales ---
+.venv/
+venv/
+env/
+
+# --- Secretos y configuración local (NUNCA subir) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# --- Herramientas de calidad / testing ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# --- Datos locales (bases, volúmenes de Docker, logs) ---
+*.sqlite3
+*.db
+pgdata/
+data/
+logs/
+*.log
+
+# --- Editores y sistema operativo ---
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
