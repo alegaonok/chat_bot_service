@@ -1,0 +1,14 @@
+Para crear entorno uv
+cd <tu-carpeta-raiz>
+uv init --package --name whatsapp_ai_assistant .
+
+Fijar Version python
+uv python pin 3.12
+
+
+uv add fastapi "uvicorn[standard]" pydantic-settings
+uv add --dev pytest pytest-asyncio ruff mypy pre-commit
+uv sync
+El primer comando agrega las dependencias de producción a pyproject.toml.
+El segundo agrega las de desarrollo (testing, linter, tipos, hooks) en un grupo aparte, para que no viajen a producción.
+uv sync crea .venv/ y genera uv.lock.
